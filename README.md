@@ -2,7 +2,9 @@
 
 This app showcases a new quantitative methodology I've developed that uses machine learning (deep convolutional neural networks) to measure the political positions that members of Congress take on Twitter based on the text of members' tweets.
 
-I developed this app in R using Shiny. I trained the deep convolutional neural network that I use to create CSM scores using Keras and Google's Tensor Flow. All of the maps in the app use GIS data from the Census Bureau. The raw tweet data from the 115th Congress that I use to train the model was collected by Justin Littman at George Washington University Libraries. It is available from the George Washington University Libraries Dataverse.
+You can view the app at https://fjelstul.shinyapps.io/CSM-app/. 
+
+I developed the app in R using Shiny. I trained the deep convolutional neural network that I use to create CSM scores using Keras and Google's Tensor Flow. All of the maps in the app use GIS data from the Census Bureau (https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.2017.html). The raw tweet data from the 115th Congress that I use to train the model was collected by Justin Littman at George Washington University Libraries. It is available from the George Washington University Libraries Dataverse (https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UIVHQR).
 
 # Introduction
 
