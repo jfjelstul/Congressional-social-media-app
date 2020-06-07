@@ -1,0 +1,12 @@
+name: CSM_App
+title: CSM_App
+username:
+account: fjelstul
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2373716
+bundleId: 3202547
+url: https://fjelstul.shinyapps.io/CSM_App/
+when: 1590706349.75654
+asMultiple: FALSE
+asStatic: FALSE

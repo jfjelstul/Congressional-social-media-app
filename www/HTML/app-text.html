@@ -1,0 +1,273 @@
+
+<!-- intro
+================================================== -->
+
+<div id="about">
+  <p>I'm a political economist, data scientist, and applied methodologist with a world-class business education from an innovative and accelerated M.B.A.-style B.B.A. program at the McCombs School of Business at the University of Texas at Austin, a top-5 business school. I have a Ph.D. in political science from Emory University. I'm currently a research fellow at Washington University in St. Louis.</p>
+  <p>I have a 7+ year track-record of conducting end-to-end, industry-leading quantitative social science research, including developing research programs, creating problem-specific research designs, and managing diverse, international teams of researchers.</p>
+  <p>I also have a 7+ year track-record of using data visualization to effectively communicate key takeaways from quantitative analysis to non-technical audiences and teaching data science skills to diverse audiences.</p>
+  <p>I'm an expert in machine learning (including neural networks), quantitative text analysis, applied statistics (including Bayesian), causal inference (for policy and program evaluation), and strategy (analytical and computational game theory and agent-based modeling). I specialize in working with complex, unstructured data and text-as-data.</p>
+  <p>I'm also an expert in the political economy of policy implementation, economic and business regulation, and global economic integration. My research focuses on political conflicts between legislative, executive, and judicial institutions over the implementation of economic and business regulations in multi-level political systems, including the European Union (EU). My applied research uses a wide array of methods, including game theory, Bayesian statistics, and causal inference techniques.</p>
+  <p>My research has appeared in the American Political Science Review and European Union Politics.</p>
+</div>
+
+<div id="intro-0">
+  <p>I'm a political economist, data scientist, and applied methodologist with a world-class business education from an innovative and accelerated M.B.A.-style B.B.A. program at the McCombs School of Business at the University of Texas at Austin, a top-5 business school. I have a Ph.D. in political science from Emory University. I'm currently a research fellow at Washington University in St. Louis.</p>
+  <p>This app showcases a new quantitative methodology I've developed that uses machine learning (deep convolutional neural networks) to measure the political positions that members of Congress take on Twitter based on the text of members' tweets.</p>
+</div>
+
+<div id="intro-1">
+  <p>When members of Congress tweet, they take political positions on a wide variety of issues. Congressional Social Media (CSM) scores are a new quantitative estimate of how partisan members of Congress are on Twitter in terms of the positions they take, which are reflected in the language members use in their tweets. A partisan member of Congress is one who consistently articulates positions that are consistent with their party's positions. This is an experimental methodology and is subject to change.</p>
+  <p>This app provides a variety of interactive tools that you can use to visualize CSM scores for members of the 115th Congress. You can visualize the distribution of CSM scores for the House of Representatives and the Senate, you can analyze the tweets of specific members of Congress, and you can analyze specific tweets posted by members of Congress or any other tweets that have political content. </p>
+  <p>I estimate CSM scores based on the text of members' tweets. I use machine learning (deep convolutional neural networks) to score all tweets posted by members of the 115h Congress (January 3, 2017 to January 3, 2019). See the methodology section for more information on how CSM scores are estimated. The sample includes approximately 250,000 tweets by senators and approximately 630,000 tweets by representatives. This works out to around 2,500 tweets per senator and around 1,450 tweets per representative.</p>
+  <p>I generate one CSM score per tweet in the sample, called a CSM-T score. I then average these CSM-T scores by member to create member-level scores, called CSM-M scores, that characterize each member's position-taking behavior on Twitter over the course of the entire 115th Congress. I can also average the tweet-level scores by member and by month, called CSM-MM scores, to create a measure of position-taking that varies over time.</p>
+</div>
+
+<div id="intro-2">
+  <p>The map above summarizes the CSM-M scores for members of the Senate. The Senate has 100 members, with two senators from each state. The color of each state indicates the average CSM-M score for that state's senators. You can hover over each state to see that state's average score and the individual scores of each senator. Unsurprisingly, the geographic distribution of CSM-M scores closely mirrors the partisanship of each state's senators.</p>
+</div>
+
+<div id="intro-3">
+  <p>The map above summarizes the CSM-M scores for members of the House. The House has 435 members, and the size of each state's delegation is roughly proportional to its population. The color of each state indicates the average CSM-M score for that state's House delegation. You can hover over each state to see the average score for that state's House delegation and how many members make up that state's delegation. Note that there may be more members than there are seats because of turnover in membership during the 115th Congress.</p>
+  <p>In addition to producing a single score for each member I also generate a distribution of estimates for each member that characterizes their position-taking behavior across all of their tweets. Members with narrower distributions are more consistent in their position-taking. CSM scores are directly comparable over time and across members of Congress. See the methodology section for more information.</p>
+</div>
+
+<!-- interpretation
+================================================== -->
+
+<div id="interpretation">
+  <p>CSM scores measure how partisan a member's position-taking behavior is on a Democrat to Republican scale from 0 to 1. Again, a partisan member of Congress is one who consistently articulates positions that are consistent with their party's positions. In other words, a strongly partisan member is one who is consistently on-message. When a member's tweets are highly consistent with other tweets by members of their party, we can say that their position-taking behavior on Twitter is more partisan. Partisanship, in this sense, is about position-taking, not the tone or sentiment of a tweet. A member can be partisan without railing against the opposing party.</p>
+  <p>CSM-M scores closer to 0 indicate that a member's tweets tend to be predictably Democratic, while scores close to 1 indicate that a member's tweets tend to be predictably Republican. In other words, scores closer to 0 indicate that a member is taking positions that are consistent with positions taken by Democrats and scores close to 1 indicate that a member is taking positions that are consistent with positions taken by Republicans.</p>
+  <p>Tweet-level scores around 0.5 are either non-partisan or do not contain political content. Members that have more of these tweets are more likely to be located towards the middle of the scale.</p>
+</div>
+
+<!-- partisanship vs ideology
+================================================== -->
+
+<div id="ideology">
+  <p>CSM scores measure partisan position-taking, not political ideology. Members who take ideologically extreme positions (on the far-right and far-left of the political spectrum) will not necessarily be representative of their party, and therefore will not necessarily be located near the ends of the scale. However, they are also unlikely to be mistaken for a member of the other party. This pushes them towards the center of their party's distribution.</p>
+  <p>Consider a brief example based on the 2020 Democratic primary election. Senators Klobuchar and Harris are widely seen as moderates, whereas Senators Warren and Sanders are widely seen as progressives. Warren and Sanders are scored as being more partisan than Klobuchar and Harris because they take positions that are more predictably Democratic (consistent with the positions taken by other Democrats).</p>
+</div>
+
+<!-- footer
+================================================== -->
+
+<div id="footer">
+  &copy; 2020, Josh Fjelstul, Ph.D.
+</div>
+
+<!-- banner
+================================================== -->
+
+<div id="banner">
+  This app is currently in active development. The methodology that it showcases is experimental and subject to change.
+</div>
+
+<!-- methodology
+================================================== -->
+
+<div id="methodology">
+  <p>This app demonstrates a method for scaling members of Congress based on the text of their tweets. I use a deep convolutional neural network to predict whether the member who posted each tweet is a Democrat or a Republican based on only the text of the tweet. I then aggregate the predicted probabilities generated by the neural network by member to create a measure of position-taking on a Democrat-Republican dimension. This method explicitly induces a Democrat-Republican dimension because the target variable is a dummy variable indicating whether the author of each tweet is a Democrat or a Republican.</p>
+  <p>I train a deep convolutional neural network on a sample of approximately 630,000 tweets by members of the House and 250,000 tweets by members of the Senate during the 115th Congress (January 3, 2017 to January 3, 2019). I tokenize each tweet, keeping the 10,000 most common words, and use a sequence length of 60.</p>
+  <p>The neural network estimates word embeddings for each word. I use pre-trained 100-dimensional word embeddings (GloVe) and allow the network to update them to learn context-specific meanings. I tune the hyper-parameters to optimize the out-of-sample predictive power. I use 100 filters, a kernel size of 7, and a dropout rate of 0.5.</p>
+  <p>I train the neural network on 70% of the samples and validate it on the other 30%. The out-of-sample accurate rate is approximately 84%, far out-performing the naive guess of approximately 40% (40% of the tweets in the sample are by Republicans).</p>
+  <p>I use the trained neural network to generate predicted probabilities, which I use to create scores on a probability scale (from 0 to 1) for each member of Congress that measure position-taking on a Democrat-Republican dimension. See the About tab for more on how to interpret these scores. I also use the trained neural network to generate out-of-sample estimates for user-provided tweets.</p>
+</div>
+
+<!-- quantifying uncertainty
+================================================== -->
+
+<div id="uncertainty">
+  <p>The predicted probabilities produced by the neural network are point predictions, but I also quantify uncertainty in these predictions. I use Monte Carlo dropout to quantify uncertainty in my neural network estimates. Recent research on neural networks shows that applying dropout before every fully connected layer in the calculation of predicted probabilities approximates Bayesian inference. Monte Carlo dropout is far more efficient than bootstrapping because it does not require re-training the model at each iteration. I use this approach to calculate posterior distributions for each tweet.</p>
+</div>
+
+<!-- app info
+================================================== -->
+
+<div id="app-info">
+  <p>I developed this app in R using Shiny. I trained the deep convolutional neural network that I use to create CSM scores using <a href="https://keras.rstudio.com">Keras</a> and Google's <a href="https://www.tensorflow.org">Tensor Flow</a>. All of the maps in the app use GIS data from the <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.2017.html">Census Bureau</a>. The raw tweet data from the 115th Congress that I use to train the model was collected by Justin Littman at George Washington University Libraries. It is available from the <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UIVHQR">George Washington University Libraries Dataverse</a>.</p>
+</div>
+
+<!-- member description
+================================================== -->
+
+<div id="member-description">
+  <p><b>FIRST LAST</b> is a PARTY who represents REPRESENTATION. Their estimated CSM-M score is SCORE. This means that, based on the text of their tweets, the model predicts that there is approximately a INVERSE_PERCENT_CHANCE% percent chance this member is a Democrat and a PERCENT_CHANCE% percent chance they are a Republican. Compared to other members, the model estimates that LAST is <b>PARTISANSHIP</b> in terms of their position-taking behavior on Twitter. Their CSM-M score falls in the CONGRESS_PERCENTILE percentile of all members of Congress, the CHAMBER_PERCENTILE percentile of the CHAMBER, the PARTY_PERCENTILE percentile of the PARTY_NAME, and the STATE_PERCENTILE percentile of STATE's Congressional delegation.</p>
+</div>
+
+<!-- chamber page intro
+================================================== -->
+
+<div id="chamber-page-intro">
+  <p>I calculate CSM-M scores by averaging all CSM-T scores for each member of Congress in the sample. I estimate all scores for all members in both chambers of Congress simultaneously using a pooled model. Use the dropdown menu below to select a chamber. You can look at the House of Representatives (435 members) or the Senate (100 members). The number of members available under each chamber does not equal the number of seats in each chamber because some members joined part-way through the Congress and also because tweet data is missing for some members.</p>
+</div>
+
+<div id="chamber-page-selected-chamber">
+  <p>You have selected the CHAMBER. There are COUNT_MEMBERS unique members and COUNT_TWEETS tweets in the sample. The average member has MEAN_COUNT_TWEETS tweets.</p>
+</div>
+
+<!-- descriptive statistics
+================================================== -->
+
+<div id="chamber-statistics-plot-before">
+  <p>The plot below shows descriptive statistics for the sample of tweets by members of the CHAMBER. The plot on the left shows the distribution of the total number of tweets by each member. The plot on the right shows the average number of tweets per month by all members of the CHAMBER across the 115th Congress.</p>
+</div>
+
+<!-- rank ordering plot
+================================================== -->
+
+<div id="rank-order-plot-before">
+  <p>How do members rank in terms of how partisan their position-taking behavior on Twitter is? The plot below rank orders members based on their CSM-M score (an average of their tweet-level CSM-T scores). The x-axis shows the CSM-M score and the y-axis shows each member (sorted by CSM-M score). CSM-M scores range from 0 to 1. In practice, however, no members have CSM-M scores at or near 0 and 1, although many do have tweets with CSM-T scores near 0 and 1.</p>
+</div>
+
+<div id="rank-order-plot-after-1">
+  <p>Points are both horizontally jittered to make them easier to see. You can hover over each point on the above plot to see which member the point represents. You can also click on a member to get more information. You can use the buttons below to add vertical lines indicating the mean CSM-M score for each party and the mean CSM-M score for the entire sample.</p>
+</div>
+
+<div id="rank-order-plot-after-2">
+  <p>If you want to look up the location of a specific member on the above plot, you can use the dropdown menu below. This will highlight the member in the plot and display more information about that member below.</p>
+</div>
+
+<!-- chamber maps
+================================================== -->
+
+<div id="chamber-maps-before">
+  <p>Unsurprisingly, there is significant geographical variation in the member-level that closely correlates with recent national election results. The top map shows the average scores of the two senators from each state. The bottom map shows the score for each representative in the House.</p>
+</div>
+<div id="chamber-maps-after">
+  <p>You can hover over each state (in the top map) or congressional district (in the bottom map) to see the relevant CSM-M scores. You can also use the dropdown menu below to select a member of Congress. This will highlight that member's state (for senators) or district (for representatives) on the relevant map. Note that some congressional districts are geographically small and may not be clearly visible. If you want to look at congressional districts in more detail, select the members section in the menu bar.</p>
+</div>
+
+<!-- party distribution plot
+================================================== -->
+
+<div id="party-distribution-plot-before">
+  <p>The plot below shows the distribution of CSM-M scores by party for the selected chamber. You can hover over each distribution to see the mean CSM-M score for each party and the number of members in each party that contribute to the distribution. The distance between the means of the two distributions indicate the level of partisan polarization in the chamber. The fact that the distributions barely overlap indicates substantial polarization in position-taking behavior on Twitter.</p>
+</div>
+<div id="party-distribution-plot-after">
+  <p>The x-axis is the CSM-M score and the y-axis is density. You can hover over each distribution to see the average CSM-M score for each party and the number of members in the sample in each party. You can use the buttons below to add vertical lines indicating the mean CSM-M score for each party and the mean CSM-M score for the entire sample.</p>
+</div>
+
+<!-- member page intro
+================================================== -->
+
+<div id="member-page-intro">
+  <p>How partisan are your representative and your senators in the language they use on Twitter? This feature provides a set of tools to explore and visualize the CSM-M score for each member of Congress. You can look at the distribution of CSM-T scores that make up each member's CSM-M score, you can see how a member's CSM-M score aligns with other members of their Congressional delegation (both representatives and senators), and you can see how a member's CSM-M score varies over time. Use the dropdown menus below to select a chamber of Congress and then a member in that chamber.</p>
+</div>
+
+<!-- member distribution
+================================================== -->
+
+<div id="member-distribution-before">
+  <p>A member's CSM-M score is the mean of the CSM-T scores for all of their tweets. Each tweet is weighted equally. In addition to calculating a CSM-M score for each member (a point prediction), I can also calculate a distribution of CSM-T scores, which more fully captures their position-taking behavior on Twitter (this is an approximated posterior distribution). The plot below shows the estimated distribution of LAST's CSM-T scores.</p>
+</div>
+
+<div id="member-distribution-after">
+  <p>The x-axis shows the CSM-T score for each of LAST's tweets, and the y-axis shows the density at each CSM-T score (how many scores there are at each point in the score). Members who are partisan Democrats will have a higher density of CSM-T scores closer to 0. Members who are partisan Republicans will have a higher density of CSM-T scores closer to 1. Members who are relatively non-partisan will have a high density of CSM-T scores around 0.5.</p>
+  <p>Members with tighter distributions are more consistent in their position-taking behavior than members with wider distributions. The interquartile range (IQR) of LAST's CSM-T scores is SCORE_SD. Compared to other members of Congress, LAST is <b>CONSISTENCY</b> in their position-taking behavior. The IQR of their CSM-T scores falls in the CONGRESS_PERCENTILE percentile of all members of Congress, the CHAMBER_PERCENTILE percentile of the CHAMBER, the PARTY_PERCENTILE percentile of the PARTY_NAME, and the STATE_PERCENTILE percentile of STATE's Congressional delegation.</p>
+  <p>Some members have a bimodal distribution with one peak near one end of the scale and another (usually smaller) peak closer to the middle. This indicates that their distribution of CSM-T scores is really a mixture of two distributions, one that reflects relatively non-partisan positions and another that reflects relatively partisan positions.</p>
+</div>
+
+<!-- congressional delegation
+================================================== -->
+
+<div id="delegation-plot-before">
+  <p>How does LAST's CSM-M score compare to those of other members in STATE's Congressional delegation? The plot below places each member of the delegation (representatives and senators) on a line from 0 to 1. In some states, there is substantial variation in position-taking across Congressional districts. Note that some states only have one Congressional district.</p>
+</div>
+
+<div id="delegation-plot-after">
+  <p>The smaller points are STATE's representatives and the two larger points are STATE's senators. LAST is highlighted. Members are randomly vertically jittered to make the plot easier to read when there are multiple members with similar scores. As such, the vertical position of each point is not informative in any way. You can hover over each point to see which member is which, what district they represent (for representatives), and what their CTP-M score is.</p>
+</div>
+
+<div id="delegation-maps-after">
+  <p>The maps below visualize the distribution of CSM-M scores for all representatives from STATE. If the member you have selected is a representative, their district will be highlighted on the map on the left and their district will be displayed on the right. If the member you have selected is a senator, you will see a map of their state's congressional districts.</p>
+</div>
+
+<!-- timeline plot
+================================================== -->
+
+<div id="timeline-plot-before">
+  <p>I take the mean of each member's CSM-T scores by month to create a simple time-varying measure of partisan position-taking, called CSM-MM. CSM-MM scores are directly comparable over time. The plot below shows LAST's CSM-MM scores for entire 115th Congress (January 2017 to December 2018). Note that January 2019 is dropped because the Congress ended on January 3.</p>
+</div>
+
+<div id="timeline-plot-after">
+  <p>The x-axis is the month and the y-axis is the CSM-MM score. The dashed line is a trend line from a linear regression (with 95% confidence intervals) that indicates how LAST's CSM-MM scores have changed over the course of the 115th Congress. For most members, their monthly scores are fairly consistent over time. On average, LAST's CSM-MM scores CHANGE. Compared to other members, the magnitude of this average monthly change is MAGNITUDE. It falls into the PERCENTILE percentile for all members of Congress.</p>
+  <p>The general stability in CSM-MM scores over time suggests that CSM-M scores are captuing meaningful variation across members and are not being driven by random fluctuations over time due to the changing content of each member's tweets. Note that some CSM-MM scores are estimated with more precision than others because they are based on a larger sample of tweets. Smaller samples generally lead to more variability. Points that are highly divergent from other surrounding points are more likely to be based on smaller samples. You can hover over each point to see the CSM-MM score, the month, and the size of the sample.</p>
+</div>
+
+<!-- tweet page intro
+================================================== -->
+
+<div id="tweet-page-intro">
+  <p>You can use this feature to analyze individual tweets. You can estimate a tweet's CSM-T score and see how precise the model's estimate is, how the CSM-T score for the tweet compares with the distribution of CSM-T scores for the member who posted the tweet, and how sensitive the model's estimate of the tweet's CSM-T score is to the inclusion or exclusion of certain words or phrases in the tweet.</p>
+  <p>Use the dropdown menu below to select how you would like to input a tweet. You can paste in the URL address for a specific tweet, you can paste in the text of a tweet, or you can choose an example tweet. (You cannot view all tweets in the sample I use to train the model or to search for specific tweets in the sample because distributing the text of a large number of tweets violates the terms of use for the Twitter API. See the methodology page for more information about where the raw tweet data comes from.)</p>
+</div>
+
+<!-- tweet input info
+================================================== -->
+
+<div id="tweet-input-info-1">
+  <p>If the tweet is from an account used by a member of the 115th Congress, and you provide a link to the tweet, the app will automatically access the tweet using the Twitter API, calculate a CSM-T score, identify the member who posted the tweet, and provide information about how the tweet compares to the member's distribution of CSM-T scores.</p>
+  <p>If you provide a tweet that is not from an account used by a member of the 115th Congress, you can still visualize the estimated CSM-T score for the tweet and access some of the tools described above, but not all features will be available. Note that since the model is trained on tweets by members of Congress, providing a tweet that is not by a member of congress will cause the model to make in an out-of-sample prediction. There may be systematic differences between the content of tweets by members of Congress and tweets by members of the public. As such, out-of-sample predictions may or may not be plausible or appropriate.</p>
+</div>
+
+<div id="tweet-input-info-2">
+  <p>Use the text box below to enter the text of a tweet. If you enter text that is not from a tweet, the model will still produce a CSM-T score. Note that since the model is trained on tweets by members of Congress, providing a tweet that is not by a member of congress will cause the model to make in an out-of-sample prediction. There may be systematic differences between the content of tweets by members of Congress and tweets by members of the public. As such, out-of-sample predictions may or may not be plausible or appropriate. Note also that the model will only consider up to 60 words. If you provide text with a higher word count than that, only the first 60 words will be use in the analysis.</p>
+</div>
+
+<div id="tweet-input-info-3">
+  <p>If you are providing the text of a tweet by a member of Congress who is in my sample, use the dropdown menu below to select the member. You can then compare the estimated CSM-T score of the tweet you provide with the distribution of CSM-T scores and estimated CSM-M score for that member to see how representative the tweet is with that member's overall position-taking behavior on Twitter.</p>
+</div>
+
+<div id="tweet-input-info-4">
+  <p>Use the menu below to select an example tweet to analyze. These example tweets cover Democrat-leaning and Republican-leaning tweets by prominent members in the House and Senate. Some of the tweets are consistent with a member's general position-taking behavior and some are not.</p>
+</div>
+
+<!-- tweet distribution plot
+================================================== -->
+
+<div id="tweet-distribution-plot-before">
+  <p>The model estimates a single CSM-T score for each tweet. However, there is always some degree of uncertainty in the model's prediction. The plot below shows a distribution that reflects the model's uncertainty about the value of the CSM-T score. (Technically, this distribution is an approximation of the Bayesian posterior distribution for the estimated CSM-T score. See the methodology section for more information.) The estimated CSM-T score is the mean of this distribution.</p>
+  <p>Note that while the model may be uncertain about the CSM-T score for any given tweet, taking the mean of the CSM-T scores for each member produces CSM-M scores that are highly robust to reestimating the model.</p>
+</div>
+<div id="tweet-distribution-plot-after">
+  <p>The x-axis is the CSM-T score and the y-axis is the density at each value. The model estimates that this tweet has a CSM-T score of SCORE. Compared to all tweets in the sample, the model estimates that this tweet is PARTISANSHIP with a CONFIDENCE degree of confidence.</p>
+  <p>The closer a tweet's estimated CSM-T score is to the center of the distribution, the less partisan it is. (A tweet can also be in the center of the scale because it does not contain political content, and therefore is equally inconsistent with positions taken by both parties.) A tweet can be relatively non-partisan independent of its ideological content. It could be relatively inconsistent with the position-taking by both parties because it is ideologically moderate or because it is ideologically extreme in a way that is inconsistent with positions taken by both parties.</p>
+  <p>The width of the distribution indicates how uncertain the model is about the CSM-T score. Some tweets will have very wide distributions and some will have very narrow distributions, depending on the language used. Highly partisan tweets will tend to have narrow distributions located near the ends of the scale. Moderately partisan tweets will tend to have distributions that span most or all of the scale, but the distribution will clearly be skewed towards one end or the other.</p>
+  <p>Non-partisan tweets that have political content will have narrow distributions located near the middle of the scale. Tweets that do not have clear political content are more likely to have wide, flat distributions that span most or all of the scale.</p>
+</div>
+
+<!-- tweet member distribution
+================================================== -->
+
+<div id="tweet-member-distribution-before">
+  <p>Any given tweet may or may not be consistent with a member's CSM-M score. The plot below compares this tweet with LAST's distribution of CSM-T scores. One distribution is the distribution of LAST's CSM-T scores. The mean of that distribution is their CSM-M score. The other distribution is the model's estimate of the provided tweet's posterior distribution. The mean of that distribution is the tweet's estimated CSM-T score.</p>
+</div>
+<div id="tweet-member-distribution-after">
+  <p>The x-axis of the plot is the tweet's CSM-T score, and the y-axis is the density at each score. The vertical lines indicate the means of each distribution. You can hover over each distribution to see more information. For LAST's distribution of CSM-T scores, you can see their CSM-M score (the mean of their CSM-T scores). For the tweet's distribution, you can see the estimated CSM-T score for the tweet (the mean of the tweet's approximated posterior distribution). The tweet's approximated posterior distribution is based on a Monte Carlo simulation with 100 iterations. The closer the mean of the tweet's distribution is to the mean of LAST's distribution of CSM-T scores, the more representative the tweet is of their position-taking behavior on Twitter. This tweet has an estimated CSM-T score of TWEET_SCORE, and LAST has an estimated CSM-M score of MEMBER_SCORE.</p>
+</div>
+
+<!-- tweet table
+================================================== -->
+
+<div id="tweet-table-before">
+  <p>The estimated CSM-T score for a tweet depends on the words in the tweet. The visualization below indicates how much dropping each word in the tweet, one at a time, would affect the estimated CSM-T score. While this indicates how much each word influences the tweet's CSM-T score, it is not necessarily a plausible counterfactual because dropping each word out of the tweet one at a time will often result in a counterfactual tweet that is not grammatically correct. This is important because the model takes into account word order and the context in which a word occurs, not just the frequency of words in the tweet.</p>
+</div>
+<div id="tweet-table-after">
+  <p>The number under each word indicates how much larger or smaller the CSM-T score is because that word is included. For example, if the number is 0.05, the tweet's CSM-T score is 0.05 higher because that word is included (and would be 0.05 lower if it were not). Words with positive numbers make the tweet more partisan in a Republican direction, and words with negative numbers make the tweet more partisan in a Democrat direction. Words with a score of 0.000 either have a negligible effect or are words that the model does not know (the model only considers the 10,000 most common words in the full sample of tweets).</p>
+  <p>The color of the circle next to each word indicates the influence of the word on the CSM-T score (larger negative numbers are more blue and larger positive numbers are more red). Note that I do not include very common words that do not contain much content value (called stop words) in the analysis.</p>
+  <p>Sometimes the influence of a word is counterintuitive at first glance. For example, the word "Trump" usually decreases a tweet's CSM-T score because Democrats tend to use the word "Trump" more than Republicans. Similarly, "Democrat" usually increases a tweet's CSM-T score because Republicans tend to use the word "Democrat" more than Democrats.</p>
+</div>
+
+<!-- tweet variations
+================================================== -->
+
+<div id="tweet-versions-before-1">
+  <p>You can use this tool to analyze how sensitive the tweet's estimated CSM-T score is to the words and phrases that are included. By adding or deleting phrases from the tweet, you can see how the CSM-T score changes. Adding and deleting phrases yields a more plausible counterfactual than dropping individual words because you can make sure the edited version is grammatically correct. This is important because the model takes into account word order and the context around each word. The text boxes below both show the original text of the tweet. You can edit the text of one or both and then click the update button to compare the two versions of the tweet. You can click the reset button to revert back to the original text.</p>
+</div>
+<div id="tweet-versions-before-2">
+  <p>The plot below shows the estimated posterior distribution for each version of the tweet. These distributions are the result of a stochastic Monte Carlo simulation so the exact shape of the distribution may change every time you update the plot. The estimated CSM-T score (the mean of the distribution) will generally be stable from run to run.</p>
+</div>
+<div id="tweet-versions-after">
+  <p>The x-axis is the CSM-T score and the y-axis is density. You can hover over each distribution to see which version of the tweet it corresponds with and to see the estimated CSM-T score. The model predicts that version B has a DIRECTION CSM-T score than version A. Version A has an estimated CSM-T score of SCORE_A and version B has an estimated CSM-T score of SCORE_B.</p>
+</div>
